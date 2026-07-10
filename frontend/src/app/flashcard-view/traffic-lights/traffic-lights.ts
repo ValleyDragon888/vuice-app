@@ -7,10 +7,4 @@ import { Component, signal } from '@angular/core';
   styleUrl: './traffic-lights.css'
 })
 export class TrafficLightsComponent {
-  frontText = 'Front';
-  backText = 'Back'
-
-  flipCard(cardElement: HTMLElement): void {
-    cardElement.classList.toggle('flipped'); // Toggle the flipped state
-  }
 }

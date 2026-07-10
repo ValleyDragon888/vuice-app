@@ -1,0 +1,21 @@
+.pill-button {
+    border-radius: 9999px;
+    border-width: 2px;
+    text-align: center;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    margin: 5px;
+}
+
+.pill-button.yes {
+    background-image: linear-gradient(to right, yellow, green);
+    border-color: black;
+}
+
+
+.pill-button.no {
+    background-image: linear-gradient(to left, yellow, red);
+    border-color: black;
+}

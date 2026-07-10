@@ -1,17 +1,19 @@
-import { Component, signal } from '@angular/core';
-import { CardComponent } from './card/card';
-import { TrafficLightsComponent } from './traffic-lights/traffic-lights';
+import { Component, OnInit, signal, ViewChild } from '@angular/core';
+import { FlashcardViewComponent } from './flashcard-view/flashcard-view';
+import { FlashcardModel } from '../models';
 
 @Component({
   selector: 'app-root',
-  imports: [CardComponent, TrafficLightsComponent],
+  imports: [FlashcardViewComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('frontend');
 
-  flipCard(cardElement: HTMLElement): void {
-    cardElement.classList.toggle('flipped'); // Toggle the flipped state
+  @ViewChild(FlashcardViewComponent) flashcard_component!: FlashcardViewComponent;
+
+  ngAfterViewInit() {
+    this.flashcard_component.setFlashcard(new FlashcardModel("a", "b"))
   }
 }
