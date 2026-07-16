@@ -1,1 +1,8 @@
-<flashcard-view></flashcard-view>
+@if (tabs[active_tab].type == "flashcard") {
+    <flashcard-view></flashcard-view>
+}
+@if (tabs[active_tab].type == "login") {
+    <div>
+        <login></login>
+    </div>
+}
