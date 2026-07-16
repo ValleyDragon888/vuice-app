@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { FlashcardModel } from '../../../models';
 
 @Component({
@@ -8,7 +8,7 @@ import { FlashcardModel } from '../../../models';
   styleUrl: './card.css'
 })
 export class CardComponent {
-  cardModel: FlashcardModel | undefined = undefined;
+  cardModel = input.required<FlashcardModel>();
 
   flipCard(cardElement: HTMLElement): void {
     cardElement.classList.toggle('flipped'); // Toggle the flipped state

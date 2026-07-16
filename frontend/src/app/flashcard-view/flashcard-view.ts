@@ -11,10 +11,6 @@ import { FlashcardModel } from '../../models';
 })
 export class FlashcardViewComponent {
 
-  @ViewChild(CardComponent) flashcard_component!: CardComponent;
-
-  setFlashcard(card: FlashcardModel) {
-    this.flashcard_component.cardModel = card;
-  }
+  current_card: FlashcardModel = new FlashcardModel("front", "back");
 
 }

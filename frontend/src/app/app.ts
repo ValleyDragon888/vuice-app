@@ -10,10 +10,4 @@ import { FlashcardModel } from '../models';
 })
 export class App {
   protected readonly title = signal('frontend');
-
-  @ViewChild(FlashcardViewComponent) flashcard_component!: FlashcardViewComponent;
-
-  ngAfterViewInit() {
-    this.flashcard_component.setFlashcard(new FlashcardModel("a", "b"))
-  }
 }
